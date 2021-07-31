@@ -1,12 +1,20 @@
-import { Composition } from 'mkcvs'
+import { extend } from 'lodash';
+import { Composition, CtxRendering } from 'mkcvs'
+// import * as THREE from 'three';
 
 const DEFAULT = {}
 
+function boot() {
+  const container = document.getElementById('container');
+  const comp = new Composition(container);
+  const layer = comp.newLayer('');
+  const cloth = new ClothSimulation(layer, DEFAULT, {});
+
+}
+
 class ClothSimulation {
   constructor(layer, defaultConfig, config) {
-    this.cvs = layer.cvs;
-    this.ctx = layer.ctx;
-    this.syncData = layer.syncData;
+    // console.log(THREE);
   }
 }
 
