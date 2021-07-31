@@ -39,7 +39,9 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "core-js": "^3.16.0",
     "mkcvs": "^1.0.18",
+    "regenerator-runtime": "^0.13.9",
     "three": "^0.130.1"
   },
   "browserslist": [
