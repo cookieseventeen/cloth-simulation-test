@@ -47,8 +47,11 @@ class ClothSimulation {
       var x = v * 2 * r - r;
       target.set(x, y, z);
     }
-    const geometry = new THREE.ParametricGeometry(radialware, 120, 120, false);
-    const material = new THREE.MeshStandardMaterial({ color: 0x00ff00 });
+
+    const textureMesh = new THREE.TextureLoader().load('./assets/img/demo.jpg');
+    //const textureMesh = new THREE.TextureLoader().load('@img/demo.jpg');
+    const geometry = new THREE.ParametricGeometry(radialware, 120, 160, false);
+    const material = new THREE.MeshStandardMaterial({ color: 0xFFFFFF, map: textureMesh });
     this.mesh = new THREE.Mesh(geometry, material);
     this.mesh.rotation.y = Math.PI;
     this.scene.add(this.mesh);
